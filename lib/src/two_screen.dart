@@ -21,7 +21,8 @@ class Twoscreen extends StatelessWidget{
                   Padding(padding: EdgeInsets.only(top: 70),),
                   Text('Выберите длительность', style: TextStyle(
                     fontSize: 25,
-                    color: Colors.white,
+                    color: Colors.black38,
+                    fontFamily: "ZenKurenaido",
                   ),),
                   Padding(padding: EdgeInsets.only(top: 55),),
                   ElevatedButton.icon(onPressed: () {},
@@ -29,7 +30,10 @@ class Twoscreen extends StatelessWidget{
                           fixedSize: Size(200, 34)// put the width and height you want
                       ),
                       icon: Icon(Icons.add),
-                      label: Text('1 минута')
+                      label: Text('1 минута', style: TextStyle(
+                        fontSize: 21,
+                        fontFamily: "ZenKurenaido",
+                      ),)
                   ),
                   Padding(padding: EdgeInsets.only(top: 55),),
                   ElevatedButton.icon(onPressed: () {},
@@ -37,7 +41,10 @@ class Twoscreen extends StatelessWidget{
                           fixedSize: Size(200, 34)// put the width and height you want
                       ),
                       icon: Icon(Icons.add),
-                      label: Text('3 минуты')
+                      label: Text('3 минуты', style: TextStyle(
+                        fontSize: 21,
+                        fontFamily: "ZenKurenaido",
+                      ),)
                   ),
                   Padding(padding: EdgeInsets.only(top: 55),),
                   ElevatedButton.icon(onPressed: () {},
@@ -45,7 +52,10 @@ class Twoscreen extends StatelessWidget{
                           fixedSize: Size(200, 34)// put the width and height you want
                       ),
                       icon: Icon(Icons.add),
-                      label: Text('5 минут')
+                      label: Text('5 минут', style: TextStyle(
+                        fontSize: 21,
+                        fontFamily: "ZenKurenaido",
+                      ),)
                   ),
                 ],
               ),

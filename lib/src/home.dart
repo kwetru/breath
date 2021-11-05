@@ -29,6 +29,7 @@ class _HomeState extends State<Home> {
                       fontSize: 25,
                       fontStyle: FontStyle.italic,
                       color: Colors.black38,
+                      fontFamily: "ZenKurenaido",
                     ),),
                     Padding(padding: EdgeInsets.only(top: 65),),
                     ElevatedButton.icon(onPressed: () {
@@ -38,7 +39,10 @@ class _HomeState extends State<Home> {
                             fixedSize: Size(200, 34)// put the width and height you want
                         ),
                         icon: Icon(Icons.add),
-                        label: Text('Успокоение')
+                        label: Text('Успокоение', style: TextStyle(
+                          fontSize: 21,
+                          fontFamily: "ZenKurenaido",
+                        ),),
 
                     ),
                     Padding(padding: EdgeInsets.only(top: 65),),
@@ -49,7 +53,10 @@ class _HomeState extends State<Home> {
                             fixedSize: Size(200, 34)// put the width and height you want
                         ),
                         icon: Icon(Icons.add),
-                        label: Text('Тонизирование')
+                        label: Text('Тонизирование', style: TextStyle(
+                          fontSize: 21,
+                          fontFamily: "ZenKurenaido",
+                        ),)
 
                     ),
                     Padding(padding: EdgeInsets.only(top: 65),),
@@ -60,7 +67,10 @@ class _HomeState extends State<Home> {
                             fixedSize: Size(200, 34)// put the width and height you want
                         ),
                         icon: Icon(Icons.add),
-                        label: Text('Закаливание')
+                        label: Text('Закаливание', style: TextStyle(
+                          fontSize: 21,
+                          fontFamily: "ZenKurenaido",
+                        ),)
 
                     )
                   ],
