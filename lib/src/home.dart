@@ -14,8 +14,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Breath'),
         centerTitle: true,
+        title: Text('Breath Application', style: TextStyle(color: Colors.black87),),
       ),
         body: CustomPaint(
           painter: BackgroundSignIn(),
@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Padding(padding: EdgeInsets.only(top: 70),),
                     Text('Выберите режим тренировки', style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 28,
                       fontStyle: FontStyle.italic,
                       color: Colors.black38,
                       fontFamily: "ZenKurenaido",
@@ -70,9 +70,22 @@ class _HomeState extends State<Home> {
                         label: Text('Закаливание', style: TextStyle(
                           fontSize: 21,
                           fontFamily: "ZenKurenaido",
-                        ),)
+                        ),),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 65),),
+                    ElevatedButton.icon(onPressed: () {
+                      Navigator.pushNamed(context, '/settings');
+                    },
+                      style: ElevatedButton.styleFrom(
+                          fixedSize: Size(200, 34)// put the width and height you want
+                      ),
+                      icon: Icon(Icons.settings),
+                      label: Text('Настройки', style: TextStyle(
+                        fontSize: 21,
+                        fontFamily: "ZenKurenaido",
+                      ),),
 
-                    )
+                    ),
                   ],
                 ),
               ],
@@ -121,3 +134,4 @@ class BackgroundSignIn extends CustomPainter{
     return oldDelegate != this;
   }
 }
+
