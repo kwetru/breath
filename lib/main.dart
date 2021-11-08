@@ -1,4 +1,4 @@
-
+import 'package:breath/src/one_minute.dart';
 import 'package:breath/src/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:breath/src/home.dart';
@@ -13,7 +13,8 @@ void main() => runApp(MaterialApp(
   routes: {
     '/': (context) => Home(),
     '/two': (context) => Twoscreen(),
-    '/settings': (context) => Settingsscreen()
+    '/settings': (context) => Settingsscreen(),
+    '/one_minute': (context) => Oneminute()
   },
 ));
 

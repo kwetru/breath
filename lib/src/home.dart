@@ -86,6 +86,20 @@ class _HomeState extends State<Home> {
                       ),),
 
                     ),
+                    Padding(padding: EdgeInsets.only(top: 65),),
+                    ElevatedButton.icon(onPressed: () {
+                      Navigator.pushNamed(context, '/one_minute');
+                    },
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: Size(200, 34)// put the width and height you want
+                        ),
+                        icon: Icon(Icons.add),
+                        label: Text('тест', style: TextStyle(
+                          fontSize: 21,
+                          fontFamily: "ZenKurenaido",
+                        ),)
+
+                    ),
                   ],
                 ),
               ],
