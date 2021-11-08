@@ -1,10 +1,11 @@
+import 'package:breath/src/one_minute.dart';
 import 'package:flutter/material.dart';
 
 class Twoscreen extends StatelessWidget{
   const Twoscreen({Key? key}) : super(key:key);
 
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.cyan[900],
         appBar: AppBar(
@@ -26,7 +27,7 @@ class Twoscreen extends StatelessWidget{
                       ),),
                       Padding(padding: EdgeInsets.only(top: 55),),
                       ElevatedButton.icon(onPressed: () {
-                        //Navigator.pushNamed(context, '/one_minute');
+                        Navigator.pushNamed(context, '/oneminute');
                         //почему он не видит context блин? Лиза, чекни это потом
                       },
                           style: ElevatedButton.styleFrom(
