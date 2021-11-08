@@ -8,7 +8,7 @@ class Settingsscreen extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.cyan[900],
       appBar: AppBar(
-        title: Text('Breath'),
+        title: Text('Breath Application', style: TextStyle(color: Colors.black87)),
         centerTitle: true,
       ),
       body:CustomPaint(

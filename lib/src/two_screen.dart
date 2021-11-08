@@ -1,4 +1,3 @@
-import 'package:breath/src/one_minute.dart';
 import 'package:flutter/material.dart';
 
 class Twoscreen extends StatelessWidget{
@@ -27,7 +26,7 @@ class Twoscreen extends StatelessWidget{
                       ),),
                       Padding(padding: EdgeInsets.only(top: 55),),
                       ElevatedButton.icon(onPressed: () {
-                        Navigator.pushNamed(context, '/oneminute');
+                        Navigator.pushNamed(context, '/one_minute');
                         //почему он не видит context блин? Лиза, чекни это потом
                       },
                           style: ElevatedButton.styleFrom(
@@ -40,7 +39,9 @@ class Twoscreen extends StatelessWidget{
                           ),)
                       ),
                       Padding(padding: EdgeInsets.only(top: 55),),
-                      ElevatedButton.icon(onPressed: () {},
+                      ElevatedButton.icon(onPressed: () {
+                        Navigator.pushNamed(context, '/three_minute');
+                      },
                           style: ElevatedButton.styleFrom(
                               fixedSize: Size(200, 34)// put the width and height you want
                           ),
