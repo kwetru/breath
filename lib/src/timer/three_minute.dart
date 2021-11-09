@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:breath/src/timer1minute.dart';
+import 'package:breath/src/timer/timer1minute.dart';
 
 void main() {
   runApp(const Ill());
