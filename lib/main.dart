@@ -1,7 +1,4 @@
-import 'package:breath/src/timer/five_minute.dart';
-import 'package:breath/src/timer/one_minute.dart';
 import 'package:breath/src/settings_screen.dart';
-import 'package:breath/src/timer/three_minute.dart';
 import 'package:flutter/material.dart';
 import 'package:breath/src/home.dart';
 import 'package:breath/src/two_screen.dart';
@@ -13,12 +10,9 @@ void main() => runApp(MaterialApp(
   ),
   initialRoute: '/',
   routes: {
-    '/': (context) => Home(),
-    '/two': (context) => Twoscreen(),
-    '/settings': (context) => Settingsscreen(),
-    '/one_minute': (context) => OneMinuteTime(),
-    '/three_minute': (context) => ThreeMinuteTime(),
-    '/five_minute': (context) => FiveMinuteTime()
+    '/': (context) => const Home(),
+    '/two': (context) => const Twoscreen(),
+    '/settings': (context) => const Settingsscreen(),
   },
 ));
 
