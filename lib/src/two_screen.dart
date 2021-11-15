@@ -52,7 +52,9 @@ class Twoscreen extends StatelessWidget{
                           ),)
                       ),
                       Padding(padding: EdgeInsets.only(top: 55),),
-                      ElevatedButton.icon(onPressed: () {},
+                      ElevatedButton.icon(onPressed: () {
+                        Navigator.pushNamed(context, '/five_minute');
+                      },
                           style: ElevatedButton.styleFrom(
                               fixedSize: Size(200, 34)// put the width and height you want
                           ),

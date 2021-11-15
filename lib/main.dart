@@ -1,3 +1,4 @@
+import 'package:breath/src/timer/five_minute.dart';
 import 'package:breath/src/timer/one_minute.dart';
 import 'package:breath/src/settings_screen.dart';
 import 'package:breath/src/timer/three_minute.dart';
@@ -16,7 +17,8 @@ void main() => runApp(MaterialApp(
     '/two': (context) => Twoscreen(),
     '/settings': (context) => Settingsscreen(),
     '/one_minute': (context) => OneMinuteTime(),
-    '/three_minute': (context) => ThreeMinuteTime()
+    '/three_minute': (context) => ThreeMinuteTime(),
+    '/five_minute': (context) => FiveMinuteTime()
   },
 ));
 
