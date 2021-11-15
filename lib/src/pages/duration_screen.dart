@@ -1,16 +1,17 @@
-import 'package:breath/src/pages/timer_page.dart';
-import 'package:flutter/material.dart';
-import '../src/custom_painter.dart';
 
-class Twoscreen extends StatelessWidget{
-  const Twoscreen({Key? key}) : super(key:key);
+import 'package:flutter/material.dart';
+import '../custom_painter.dart';
+import 'timer_page.dart';
+
+class Durationscreen extends StatelessWidget{
+  const Durationscreen({Key? key}) : super(key:key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.cyan[900],
         appBar: AppBar(
-        title: Text('Breath Application', style: const TextStyle(color: Colors.black87)),
+        title: const Text('Breath Application', style: TextStyle(color: Colors.black87)),
     centerTitle: true,
     ),
       body:CustomPaint(

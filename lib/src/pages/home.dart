@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'custom_painter.dart';
+import '../custom_painter.dart';
 
 class Home extends StatefulWidget{
   const Home({Key? key}) : super (key: key);
@@ -7,7 +7,6 @@ class Home extends StatefulWidget{
   @override
   State<Home> createState() => _HomeState();
 }
-
 
 
 class _HomeState extends State<Home> {

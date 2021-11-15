@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../src/custom_painter.dart';
+import '../custom_painter.dart';
 
 class Settingsscreen extends StatelessWidget{
   const Settingsscreen({Key? key}) : super(key:key);
