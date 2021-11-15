@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:breath/src/timer/timer1minute.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const OneMinuteTime());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class OneMinuteTime extends StatelessWidget {
+  const OneMinuteTime({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

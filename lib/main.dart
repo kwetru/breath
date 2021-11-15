@@ -15,8 +15,8 @@ void main() => runApp(MaterialApp(
     '/': (context) => Home(),
     '/two': (context) => Twoscreen(),
     '/settings': (context) => Settingsscreen(),
-    '/one_minute': (context) => MyApp(),
-    '/three_minute': (context) => Ill()
+    '/one_minute': (context) => OneMinuteTime(),
+    '/three_minute': (context) => ThreeMinuteTime()
   },
 ));
 
