@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../pages/cubit/timer_cubit.dart';
 import '../custom_painter.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class TimerPage extends StatelessWidget {
  final int waitTime;
@@ -182,3 +184,34 @@ class _TimerPage extends StatelessWidget {
     );
   }
 }
+class PraxisStudy extends StatefulWidget {
+   const PraxisStudy({Key? key,}) : super(key: key);
+   @override
+   _PraxisState createState() => _PraxisState(); }
+
+   class _PraxisState  extends State<PraxisStudy> {
+
+     void initFirebase() async {
+       WidgetsFlutterBinding.ensureInitialized();
+       await Firebase.initializeApp();
+     }
+
+     @override
+     void initState() {
+       super.initState();
+
+       initFirebase();
+     }
+
+     @override
+     Widget build(BuildContext context) {
+       // TODO: implement build
+       throw UnimplementedError();
+     }
+
+  // @override
+  // Widget build(BuildContext context) {
+  // return StreamBuilder<QuerySnapshot>(
+  // stream: FirebaseFirestore.instance.collection('praxis').snapshots(), }
+  // );};
+ }
