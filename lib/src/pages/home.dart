@@ -72,25 +72,19 @@ class _HomeState extends State<Home> {
                           fontFamily: "ZenKurenaido",
                         ),),
                     ),
-                    const Padding(padding: EdgeInsets.only(top: 65),),
-                    ElevatedButton.icon(onPressed: () {
-                      Navigator.pushNamed(context, '/settings');
-                    },
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(200, 34)// put the width and height you want
-                      ),
-                      icon: const Icon(Icons.settings),
-                      label: const Text('Настройки', style: TextStyle(
-                        fontSize: 21,
-                        fontFamily: "ZenKurenaido",
-                      ),),
-
-                    ),
                   ],
                 ),
               ],
             ),
         ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.lightbulb_outline_rounded,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/settings');
+        },
+      ),
     );
 
   }

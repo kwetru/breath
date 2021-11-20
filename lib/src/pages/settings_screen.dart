@@ -19,19 +19,19 @@ class Settingsscreen extends StatelessWidget{
             children: [
               Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 70),),
-                  Text('Настройки приложения', style: TextStyle(
+                  const Padding(padding: EdgeInsets.only(top: 70),),
+                  const Text('Настройки приложения', style: TextStyle(
                     fontSize: 25,
                     color: Colors.black38,
                     fontFamily: "ZenKurenaido",
                   ),),
-                  Padding(padding: EdgeInsets.only(top: 55),),
+                  const Padding(padding: EdgeInsets.only(top: 55),),
                   ElevatedButton.icon(onPressed: () {},
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size(200, 34)// put the width and height you want
                       ),
-                      icon: Icon(Icons.add),
-                      label: Text('Темная тема', style: TextStyle(
+                      icon: const Icon(Icons.add),
+                      label: const Text('Темная тема', style: TextStyle(
                         fontSize: 21,
                         fontFamily: "ZenKurenaido",
                       ),)
