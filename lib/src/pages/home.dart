@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import '../custom_painter.dart';
-import 'package:breath/src/pages/duration_screen.dart';
-import 'package:breath/src/pages/settings_screen.dart';
 
 class Home extends StatefulWidget{
   const Home({Key? key}) : super (key: key);
@@ -14,7 +12,6 @@ class Home extends StatefulWidget{
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -36,7 +33,7 @@ class _HomeState extends State<Home> {
                     ),),
                     const Padding(padding: EdgeInsets.only(top: 65),),
                     ElevatedButton.icon(onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Durationscreen()));
+                      Navigator.pushNamed(context, '/two');
                     },
                         style: ElevatedButton.styleFrom(
                             fixedSize: const Size(200, 34)// put the width and height you want
@@ -50,7 +47,7 @@ class _HomeState extends State<Home> {
                     ),
                     const Padding(padding: EdgeInsets.only(top: 65),),
                     ElevatedButton.icon(onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Durationscreen()));
+                      Navigator.pushNamed(context, '/two');
                     },
                         style: ElevatedButton.styleFrom(
                             fixedSize: const Size(200, 34)// put the width and height you want
@@ -64,7 +61,7 @@ class _HomeState extends State<Home> {
                     ),
                     const Padding(padding: EdgeInsets.only(top: 65),),
                     ElevatedButton.icon(onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Durationscreen()));
+                      Navigator.pushNamed(context, '/two');
                     },
                         style: ElevatedButton.styleFrom(
                             fixedSize: const Size(200, 34)// put the width and height you want
@@ -85,7 +82,7 @@ class _HomeState extends State<Home> {
           Icons.lightbulb_outline_rounded,
         ),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const Settingsscreen()));
+          Navigator.pushNamed(context, '/settings');
         },
       ),
     );
