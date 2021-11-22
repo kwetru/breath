@@ -203,10 +203,17 @@ class PraxisStudy extends StatefulWidget {
        initFirebase();
      }
 
+
      @override
      Widget build(BuildContext context) {
-       // TODO: implement build
-       throw UnimplementedError();
+       return StreamBuilder<QuerySnapshot>(
+           stream: FirebaseFirestore.instance.collection('users').snapshots(),
+       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot){
+       if(!snapshot.hasData) return const Text('');
+
+
+      throw UnimplementedError();
+     });
      }
 
   // @override
