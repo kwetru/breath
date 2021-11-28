@@ -30,7 +30,6 @@ class Durationscreen extends StatelessWidget{
                       Padding(padding: EdgeInsets.only(top: 55),),
                       ElevatedButton.icon(onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => const TimerPage(waitTime: 60)));
-                        //почему он не видит context блин? Лиза, чекни это потом
                       },
                           style: ElevatedButton.styleFrom(
                               fixedSize: Size(200, 34)// put the width and height you want

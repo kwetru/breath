@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,8 +35,10 @@ class _TimerPage extends StatelessWidget {
       if (state is TimerInitial) {
         return CustomPaint(
           painter: BackgroundSignIn(),
-          child: Center(
-              child: Row(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Stack(
@@ -69,15 +72,20 @@ class _TimerPage extends StatelessWidget {
 
                       )),
                 ],
-              )
+              ),
+              SizedBox(height: 20)
+            ],
           ),
         );
       }
       if (state is TimerRunState) {
         return CustomPaint(
           painter: BackgroundSignIn(),
-          child: Center(
-              child: Row(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Expanded(child: Text(state.text)),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
@@ -120,15 +128,19 @@ class _TimerPage extends StatelessWidget {
 
                       )),
                 ],
-              )
+              ),
+              SizedBox(height: 20)
+            ],
           ),
         );
       }
       if (state is TimerPauseState) {
         return CustomPaint(
           painter: BackgroundSignIn(),
-          child: Center(
-              child: Row(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
@@ -172,7 +184,9 @@ class _TimerPage extends StatelessWidget {
 
                       )),
                 ],
-              )
+              ),
+              SizedBox(height: 20)
+            ],
           ),
         );
       }

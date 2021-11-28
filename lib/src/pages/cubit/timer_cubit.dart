@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
+import '../../utils/text_blanks.dart';
 
 part 'timer_state.dart';
 
@@ -11,24 +12,46 @@ class TimerCubit extends Cubit<TimerState> {
   int _currentWaitTimeInSec;
   double _percent;
   String _timeStr;
+  String _text;
+  int _counter = 0;
 
   TimerCubit({required int waitTimeInSec})
       : _waitTimeInSec = waitTimeInSec,
         _currentWaitTimeInSec = waitTimeInSec,
         _percent = 1,
         _timeStr = "${waitTimeInSec ~/ 60}".padLeft(2, '0') +":"+"${waitTimeInSec % 60}".padLeft(2, '0'),
+        _text = '',
         super(TimerInitial("${waitTimeInSec ~/ 60}".padLeft(2, '0') +":"+"${waitTimeInSec % 60}".padLeft(2, '0'), 1));
 
 
 
   Future<void> startTimer() async{
-    emit(TimerRunState(_timeStr, _percent, _waitTimeInSec));
+    emit(TimerRunState(_timeStr, _percent, _waitTimeInSec, _text));
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
+      if (_currentWaitTimeInSec%10 == 0 && _currentWaitTimeInSec != 0) {
+        if (_waitTimeInSec == 60) {
+          _text = oneMinuteTextList[_counter];
+          _counter ++;
+          print(_text);
+        }
+        if (_waitTimeInSec == 180) {
+          _text = threeMinuteTextList[_counter];
+          _counter ++;
+          print(_text);
+        }
+        if (_waitTimeInSec == 300) {
+      _text = fiveMinuteTextList[_counter];
+      _counter ++;
+      print(_text);
+      }
+      }
       _currentWaitTimeInSec -= 1;
       _percent = _currentWaitTimeInSec / _waitTimeInSec;
       _timeStr = await calculationTime();
-      emit(TimerRunState(_timeStr, _percent, _waitTimeInSec));
+      emit(TimerRunState(_timeStr, _percent, _waitTimeInSec, _text));
       if (_currentWaitTimeInSec < 0) {
+        _text = '';
+        _counter = 0;
         _currentWaitTimeInSec = _waitTimeInSec;
         _percent = 1;
         _timeStr = await calculationTime();
@@ -40,11 +63,13 @@ class TimerCubit extends Cubit<TimerState> {
   }
 
   Future<void> restartTimer() async {
+    _text = '';
+    _counter = 0;
     _currentWaitTimeInSec = _waitTimeInSec;
     _percent = 1;
     _timeStr = await calculationTime();
     _timer?.cancel();
-    emit(TimerRunState(_timeStr, _percent, _waitTimeInSec));
+    emit(TimerRunState(_timeStr, _percent, _waitTimeInSec, _text));
     startTimer();
 
   }
@@ -62,3 +87,4 @@ class TimerCubit extends Cubit<TimerState> {
   }
 
 }
+
