@@ -28,7 +28,7 @@ class Settingsscreen extends StatelessWidget{
                   const Padding(padding: EdgeInsets.only(top: 55),),
                   ElevatedButton.icon(onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          fixedSize: Size(200, 34)// put the width and height you want
+                          fixedSize: const Size(200, 34)// put the width and height you want
                       ),
                       icon: const Icon(Icons.add),
                       label: const Text('Темная тема', style: TextStyle(

@@ -27,41 +27,41 @@ class Durationscreen extends StatelessWidget{
                         color: Colors.black38,
                         fontFamily: "ZenKurenaido",
                       ),),
-                      Padding(padding: EdgeInsets.only(top: 55),),
+                      const Padding(padding: EdgeInsets.only(top: 55),),
                       ElevatedButton.icon(onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => const TimerPage(waitTime: 60)));
                       },
                           style: ElevatedButton.styleFrom(
-                              fixedSize: Size(200, 34)// put the width and height you want
+                              fixedSize: const Size(200, 34)// put the width and height you want
                           ),
-                          icon: Icon(Icons.add),
-                          label: Text('1 минута', style: TextStyle(
+                          icon: const Icon(Icons.add),
+                          label: const Text('1 минута', style: TextStyle(
                             fontSize: 21,
                             fontFamily: "ZenKurenaido",
                           ),)
                       ),
-                      Padding(padding: EdgeInsets.only(top: 55),),
+                      const Padding(padding: EdgeInsets.only(top: 55),),
                       ElevatedButton.icon(onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => const TimerPage(waitTime: 180)));
                       },
                           style: ElevatedButton.styleFrom(
-                              fixedSize: Size(200, 34)// put the width and height you want
+                              fixedSize: const Size(200, 34)// put the width and height you want
                           ),
-                          icon: Icon(Icons.add),
-                          label: Text('3 минуты', style: TextStyle(
+                          icon: const Icon(Icons.add),
+                          label: const Text('3 минуты', style: TextStyle(
                             fontSize: 21,
                             fontFamily: "ZenKurenaido",
                           ),)
                       ),
-                      Padding(padding: EdgeInsets.only(top: 55),),
+                      const Padding(padding: EdgeInsets.only(top: 55),),
                       ElevatedButton.icon(onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => const TimerPage(waitTime: 300)));
                       },
                           style: ElevatedButton.styleFrom(
-                              fixedSize: Size(200, 34)// put the width and height you want
+                              fixedSize: const Size(200, 34)// put the width and height you want
                           ),
-                          icon: Icon(Icons.add),
-                          label: Text('5 минут', style: TextStyle(
+                          icon: const Icon(Icons.add),
+                          label: const Text('5 минут', style: TextStyle(
                             fontSize: 21,
                             fontFamily: "ZenKurenaido",
                           ),)
