@@ -83,10 +83,10 @@ class _TimerPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Expanded(child: Text(state.text,
-                // textAlign: TextAlign.center,
-                style:
-              const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white, decoration: TextDecoration.none),)),
+              Expanded( child: Center(child: Text(state.text,
+                textAlign: TextAlign.center,
+               style:
+              const TextStyle(fontFamily: "ZenKurenaido", fontSize: 28, color: Colors.black87, decoration: TextDecoration.none),))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
