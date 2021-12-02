@@ -35,7 +35,7 @@ class _TimerPage extends StatelessWidget {
         return CustomPaint(
           painter: BackgroundSignIn(),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
