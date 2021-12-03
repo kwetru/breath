@@ -1,7 +1,9 @@
 
+import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import '../custom_painter.dart';
 import 'timer_page.dart';
+
 
 class Durationscreen extends StatelessWidget{
   const Durationscreen({Key? key}) : super(key:key);

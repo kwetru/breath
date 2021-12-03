@@ -77,14 +77,6 @@ class _HomeState extends State<Home> {
               ],
             ),
         ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(
-          Icons.lightbulb_outline_rounded,
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, '/settings');
-        },
-      ),
     );
 
   }
