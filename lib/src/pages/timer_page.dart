@@ -2,14 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../pages/cubit/timer_cubit.dart';
+import './../cubit/timer_cubit.dart';
 import '../custom_painter.dart';
 
-
 class TimerPage extends StatelessWidget {
- final int waitTime;
-  const TimerPage({Key? key, required this.waitTime}):
-        super(key: key);
+  final int waitTime;
+  const TimerPage({Key? key, required this.waitTime}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +18,8 @@ class TimerPage extends StatelessWidget {
   }
 }
 
-
-
 class _TimerPage extends StatelessWidget {
   const _TimerPage({Key? key}) : super(key: key);
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -54,11 +47,14 @@ class _TimerPage extends StatelessWidget {
                           )),
                       Positioned(
                           child: Text(
-                            state.waitTime,
-                            style:
-                            const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white, decoration: TextDecoration.none),
-                            textAlign: TextAlign.center,
-                          ))
+                        state.waitTime,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                            color: Colors.white,
+                            decoration: TextDecoration.none),
+                        textAlign: TextAlign.center,
+                      ))
                     ],
                   ),
                   Container(
@@ -66,9 +62,10 @@ class _TimerPage extends StatelessWidget {
                       width: 65,
                       margin: const EdgeInsets.all(15),
                       child: FloatingActionButton(
-                        onPressed: () => context.read<TimerCubit>().startTimer(),
-                        child: const Icon(Icons.play_circle_outline_sharp, size: 55),
-
+                        onPressed: () =>
+                            context.read<TimerCubit>().startTimer(),
+                        child: const Icon(Icons.play_circle_outline_sharp,
+                            size: 55),
                       )),
                 ],
               ),
@@ -83,10 +80,17 @@ class _TimerPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Expanded( child: Center(child: Text(state.text,
+              Expanded(
+                  child: Center(
+                      child: Text(
+                state.text,
                 textAlign: TextAlign.center,
-               style:
-              const TextStyle(fontFamily: "ZenKurenaido", fontSize: 28, color: Colors.black87, decoration: TextDecoration.none),))),
+                style: const TextStyle(
+                    fontFamily: "ZenKurenaido",
+                    fontSize: 28,
+                    color: Colors.black87,
+                    decoration: TextDecoration.none),
+              ))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -95,9 +99,9 @@ class _TimerPage extends StatelessWidget {
                       width: 65,
                       margin: const EdgeInsets.all(15),
                       child: FloatingActionButton(
-                        onPressed: () => context.read<TimerCubit>().restartTimer(),
+                        onPressed: () =>
+                            context.read<TimerCubit>().restartTimer(),
                         child: const Icon(Icons.replay_circle_filled, size: 55),
-
                       )),
                   Stack(
                     alignment: Alignment.center,
@@ -113,11 +117,14 @@ class _TimerPage extends StatelessWidget {
                           )),
                       Positioned(
                           child: Text(
-                            state.currentTime,
-                            style:
-                            const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white, decoration: TextDecoration.none),
-                            textAlign: TextAlign.center,
-                          ))
+                        state.currentTime,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                            color: Colors.white,
+                            decoration: TextDecoration.none),
+                        textAlign: TextAlign.center,
+                      ))
                     ],
                   ),
                   Container(
@@ -125,9 +132,9 @@ class _TimerPage extends StatelessWidget {
                       width: 65,
                       margin: const EdgeInsets.all(15),
                       child: FloatingActionButton(
-                        onPressed: () => context.read<TimerCubit>().pauseTimer(),
+                        onPressed: () =>
+                            context.read<TimerCubit>().pauseTimer(),
                         child: const Icon(Icons.pause_circle_outline, size: 55),
-
                       )),
                 ],
               ),
@@ -150,11 +157,10 @@ class _TimerPage extends StatelessWidget {
                       width: 65,
                       margin: const EdgeInsets.all(15),
                       child: FloatingActionButton(
-                        onPressed: () => context.read<TimerCubit>().restartTimer(),
+                        onPressed: () =>
+                            context.read<TimerCubit>().restartTimer(),
                         child: const Icon(Icons.replay_circle_filled, size: 55),
-
                       )),
-
                   Stack(
                     alignment: Alignment.center,
                     children: [
@@ -169,11 +175,14 @@ class _TimerPage extends StatelessWidget {
                           )),
                       Positioned(
                           child: Text(
-                            state.currentTime,
-                            style:
-                            const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white, decoration: TextDecoration.none),
-                            textAlign: TextAlign.center,
-                          ))
+                        state.currentTime,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                            color: Colors.white,
+                            decoration: TextDecoration.none),
+                        textAlign: TextAlign.center,
+                      ))
                     ],
                   ),
                   Container(
@@ -181,9 +190,10 @@ class _TimerPage extends StatelessWidget {
                       width: 65,
                       margin: const EdgeInsets.all(15),
                       child: FloatingActionButton(
-                        onPressed: () => context.read<TimerCubit>().startTimer(),
-                        child: const Icon(Icons.play_circle_outline_sharp, size: 55),
-
+                        onPressed: () =>
+                            context.read<TimerCubit>().startTimer(),
+                        child: const Icon(Icons.play_circle_outline_sharp,
+                            size: 55),
                       )),
                 ],
               ),
@@ -191,13 +201,9 @@ class _TimerPage extends StatelessWidget {
             ],
           ),
         );
-      }
-      else {
+      } else {
         return Container();
       }
-
-    }
-    );
+    });
   }
 }
-
