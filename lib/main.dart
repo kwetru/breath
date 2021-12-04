@@ -13,10 +13,11 @@ void main() {
     theme: ThemeData(
       primaryColor: Colors.cyan,
     ),
-    initialRoute: '/',
-    routes: {
-      '/': (context) => const Home(),
-      '/two': (context) => const Durationscreen(),
-    },
+    home: Home(),
+    //initialRoute: '/',
+    //routes: {
+    //  '/': (context) => const Home(),
+    //  '/two': (context) => const Durationscreen(mode: 1),
+    //},
   ));
 }
