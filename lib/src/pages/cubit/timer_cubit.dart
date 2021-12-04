@@ -62,6 +62,80 @@ class TimerCubit extends Cubit<TimerState> {
 
   }
 
+  Future<void> startToningTimer() async{
+    emit(TimerToningRunState(_timeStr, _percent, _waitTimeInSec, _text));
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
+      if (_currentWaitTimeInSec%10 == 0 && _currentWaitTimeInSec != 0) {
+        if (_waitTimeInSec == 60) {
+          _text = oneMinuteTextToningList[_counter];
+          _counter ++;
+          print(_text);
+        }
+        if (_waitTimeInSec == 180) {
+          _text = threeMinuteTextToningList[_counter];
+          _counter ++;
+          print(_text);
+        }
+        if (_waitTimeInSec == 300) {
+          _text = fiveMinuteTextToningList[_counter];
+          _counter ++;
+          print(_text);
+        }
+      }
+      _currentWaitTimeInSec -= 1;
+      _percent = _currentWaitTimeInSec / _waitTimeInSec;
+      _timeStr = await calculationTime();
+      emit(TimerToningRunState(_timeStr, _percent, _waitTimeInSec, _text));
+      if (_currentWaitTimeInSec < 0) {
+        _text = '';
+        _counter = 0;
+        _currentWaitTimeInSec = _waitTimeInSec;
+        _percent = 1;
+        _timeStr = await calculationTime();
+        _timer?.cancel();
+        emit(TimerInitial(_timeStr, 1));
+      }
+    });
+
+  }
+
+  Future<void> startHardeningTimer() async{
+    emit(TimerHardeningRunState(_timeStr, _percent, _waitTimeInSec, _text));
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
+      if (_currentWaitTimeInSec%10 == 0 && _currentWaitTimeInSec != 0) {
+        if (_waitTimeInSec == 60) {
+          _text = oneMinuteTextHardeningList[_counter];
+          _counter ++;
+          print(_text);
+        }
+        if (_waitTimeInSec == 180) {
+          _text = threeMinuteTextHardeningList[_counter];
+          _counter ++;
+          print(_text);
+        }
+        if (_waitTimeInSec == 300) {
+          _text = fiveMinuteTextHardeningList[_counter];
+          _counter ++;
+          print(_text);
+        }
+      }
+      _currentWaitTimeInSec -= 1;
+      _percent = _currentWaitTimeInSec / _waitTimeInSec;
+      _timeStr = await calculationTime();
+      emit(TimerHardeningRunState(_timeStr, _percent, _waitTimeInSec, _text));
+      if (_currentWaitTimeInSec < 0) {
+        _text = '';
+        _counter = 0;
+        _currentWaitTimeInSec = _waitTimeInSec;
+        _percent = 1;
+        _timeStr = await calculationTime();
+        _timer?.cancel();
+        emit(TimerInitial(_timeStr, 1));
+      }
+    });
+
+  }
+
   Future<void> restartTimer() async {
     _text = '';
     _counter = 0;

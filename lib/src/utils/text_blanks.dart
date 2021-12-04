@@ -38,3 +38,22 @@ List <String> fiveMinuteTextList = ['Диафрагмальное дыхание
   'Сделайте глубокий вдох носом, затем быстро вдохните носом еще минимум 3 раза (не выдыхая).Медленно выдохните через сложенные в трубочку губы.',
   'Сделайте глубокий вдох носом, затем быстро вдохните носом еще минимум 3 раза (не выдыхая).Медленно выдохните через сложенные в трубочку губы.', 'Размеренно делайте вдохи и выдохи', 'Повторите упражнение', 'Тренировка завершена. Спасибо, что были с нами. До новых встреч!',];
 
+
+List <String> oneMinuteTextToningList = ['Kolya1', 'Kolya2', 'Kolya3', 'Kolya4', 'Kolya5', 'Kolya6'];
+List <String> threeMinuteTextToningList = ['Kolya1', 'Kolya2', 'Kolya3', 'Kolya4', 'Kolya5', 'Kolya6', 'Kolya7', 'Kolya8', 'Kolya9', 'Kolya10', 'Kolya11', 'Kolya12',
+  'Kolya13', 'Kolya14', 'Kolya15', 'Kolya16', 'Kolya17', 'Kolya18'];
+List <String> fiveMinuteTextToningList = ['Kolya1', 'Kolya2', 'Kolya3', 'Kolya4', 'Kolya5', 'Kolya6',
+  'Kolya7', 'Kolya8', 'Kolya9', 'Kolya10', 'Kolya11', 'Kolya12',
+  'Kolya13', 'Kolya14', 'Kolya15', 'Kolya16', 'Kolya17', 'Kolya18',
+  'Kolya19', 'Kolya20', 'Kolya21', 'Kolya22', 'Kolya23', 'Kolya24',
+  'Kolya25', 'Kolya26', 'Kolya27', 'Kolya28', 'Kolya29', 'Kolya30',];
+
+
+List <String> oneMinuteTextHardeningList = ['Lisa1', 'Lisa2', 'Lisa3', 'Lisa4', 'Lisa5', 'Lisa6'];
+List <String> threeMinuteTextHardeningList = ['Lisa1', 'Lisa2', 'Lisa3', 'Lisa4', 'Lisa5', 'Lisa6', 'Lisa7', 'Lisa8', 'Lisa9', 'Lisa10', 'Lisa11', 'Lisa12',
+  'Lisa13', 'Lisa14', 'Lisa15', 'Lisa16', 'Lisa17', 'Lisa18'];
+List <String> fiveMinuteTextHardeningList = ['Lisa1', 'Lisa2', 'Lisa3', 'Lisa4', 'Lisa5', 'Lisa6',
+  'Lisa7', 'Lisa8', 'Lisa9', 'Lisa10', 'Lisa11', 'Lisa12',
+  'Lisa13', 'Lisa14', 'Lisa15', 'Lisa16', 'Lisa17', 'Lisa18',
+  'Lisa19', 'Lisa20', 'Lisa21', 'Lisa22', 'Lisa23', 'Lisa24',
+  'Lisa25', 'Lisa26', 'Lisa27', 'Lisa28', 'Lisa29', 'Lisa30',];

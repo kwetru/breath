@@ -19,6 +19,25 @@ class TimerRunState extends TimerState {
   TimerRunState( this.currentTime,this.percent, this.waitTime, this.text);
 }
 
+class TimerToningRunState extends TimerState {
+  final String currentTime;
+  final double percent;
+  final int waitTime;
+  final String text;
+
+  TimerToningRunState( this.currentTime,this.percent, this.waitTime, this.text);
+}
+
+
+class TimerHardeningRunState extends TimerState {
+  final String currentTime;
+  final double percent;
+  final int waitTime;
+  final String text;
+
+  TimerHardeningRunState( this.currentTime,this.percent, this.waitTime, this.text);
+}
+
 class TimerPauseState extends TimerState {
   final String currentTime;
   final double percent;
